@@ -31,21 +31,20 @@ let atticus = new Dog('Atticus', undefined, undefined, undefined, )
 // /_/ /_/\__,_/_/ /_/ /_/\__,_/_/ /_/____/
 
 // Human Constructor & Prototype
-function Human (name, status, cool) {
+function Human (name, cool) {
   this.name = name;
-  this.status = status;
   this.cool = cool;
-  this.pet = function() {
-
+  this.pet = function(pet) {
+      pet.status = 'happy'
   }
-  this.feed = function() {
-
+  this.feed = function(pet) {
+      pet.hungry = false
   }
 }
 
-let mason = new Human('Mason', '', false)
+let mason = new Human('Mason', false)
 
-let julia = new Human('Julia', '', true)
+let julia = new Human('Julia', true)
 
 // Instances of Human
 // Needed: mason, julia
